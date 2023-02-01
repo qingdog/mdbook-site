@@ -56,6 +56,7 @@ $ tree -a
     └── chapter_1.md
 ```
 * .gitignore 创建的忽略配置文件
+* book 初始化项目结构自带的文件夹，里面放mdbook解析md文件后的html页面（可放在新的分支）
 * book.toml 作者、语言、源目录、标题
 * src 源目录
   * SUMMARY.md 指定项目结构（填写标题和标题的md路径）
