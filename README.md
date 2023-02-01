@@ -55,8 +55,8 @@ $ tree -a
     ├── SUMMARY.md
     └── chapter_1.md
 ```
-* .gitignore 创建的忽略配置文件
-* book 初始化项目结构自带的文件夹，里面放mdbook解析md文件后的html页面（可放在新的分支）
+* .gitignore 创建的忽略配置文件（可以用于忽略book文件夹，不用把页面资源上传到主分支）
+* book 初始化项目结构自带的文件夹，里面放mdbook解析md文件后的html页面（可发布到 新分支）
 * book.toml 作者、语言、源目录、标题
 * src 源目录
   * SUMMARY.md 指定项目结构（填写标题和标题的md路径）
@@ -76,8 +76,10 @@ $ vim PublishMySite.yml
 name: PublishMySite
 
 # Controls when the action will run. 
+# 控制操作何时运行。
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
+  # 触发推送或拉取请求事件的工作流，但仅限于主分支
   push:
     branches:
       - main
@@ -86,18 +88,24 @@ on:
       - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# 工作流运行由一个或多个可以顺序或并行运行的作业组成
 jobs:
   # This workflow contains a single job called "build"
+  # 此工作流程包含一个名为“构建”的作业
   build:
     # The type of runner that the job will run on
+    # 作业将运行的运行器类型
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    # 步骤表示将作为作业的一部分执行的一系列任务
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # 签出（检查） $GITHUB_WORKSPACE 下的存储库，以便您的工作可以访问它
       - uses: actions/checkout@v2
 
       # Build markdown files to a static site.
+      # 将markdown文件构建到静态站点。
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
@@ -105,6 +113,7 @@ jobs:
       - run: mdbook build . --dest-dir ./book # --dest-dir is relative to <dir>
       
       # Publish the static site to gh-pages branch.
+      # 将静态站点发布到 gh-pages 分支。
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
