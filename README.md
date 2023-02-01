@@ -22,4 +22,3 @@
 Material for MkDocs 则真的很现代 开箱即用 可以配置的选项超级多
 
 总之我是非常安利 使用指南 <https://github.com/Yang-Xijie/mkdocs-site>
-666
