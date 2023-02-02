@@ -58,6 +58,15 @@ $ tree -a
 * .gitignore 创建的忽略配置文件（可以用于忽略book文件夹，不用把页面资源上传到主分支）
 * book 初始化项目结构自带的文件夹，里面放mdbook解析md文件后的html页面（可发布到 新分支）
 * book.toml 作者、语言、源目录、标题
+```
+$ cat book.toml
+[book]
+authors = ["yxj"]
+language = "en"
+multilingual = false
+src = "src"
+title = "my-book"
+```
 * src 源目录
   * SUMMARY.md 指定项目结构（填写标题和标题的md路径）
   * chapter_1.md 初始化项目结构自带md（测试）
