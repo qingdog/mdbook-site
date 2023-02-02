@@ -5,4 +5,4 @@
 - [README](./README.md)
 - [概要](./SUMMARY.md)
 
-- [0](../)
+- [index](../README.md)
