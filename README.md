@@ -70,7 +70,20 @@ title = "my-book"
 * src 源目录
   * SUMMARY.md 指定项目结构（填写标题和标题的md路径）
   * chapter_1.md 初始化项目结构自带md（测试）
-  
+```
+$ cat SUMMARY.md
+# Summary
+
+- [chapter_1](./chapter_1.md)
+```
+```
+# Summary
+
+- [chapter_1](./chapter_1.md)
+- [index](../README.md)
+```
+* - [index](../README.md) 浏览器url链接回退上一级到index.html
+
 ## Add GitHub Workflow
 
 ```
