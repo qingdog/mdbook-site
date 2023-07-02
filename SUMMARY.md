@@ -4,4 +4,4 @@
 - [README](./README.md)
 - [概要](./SUMMARY.md)
 
-- [主页](https://qingdog.github.io/)
+- [主页](https://qingdog.github.io/README.md)
