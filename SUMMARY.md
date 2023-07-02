@@ -5,7 +5,7 @@
 - [translate](https://qingdog.github.io/interview/translate.html)
   
 - [interview](https://qingdog.github.io/interview/index.html)
-- [interview并发遍](https://github.com/qingdog/interview/blob/master/day02%E5%B9%B6%E5%8F%91%E7%AF%87%E8%AE%B2%E4%B9%89.md)
+- [interview并发篇](https://qingdog.github.io/interview/day02并发篇讲义.html)
 
 
 - [主页](https://qingdog.github.io/README.md)
